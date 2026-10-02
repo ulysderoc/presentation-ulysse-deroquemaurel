@@ -1,0 +1,465 @@
+/* ============================================================
+   Polices
+   ------------------------------------------------------------
+   Druk Wide Bold est une police payante (Commercial Type).
+   Dépose ton fichier dans /fonts (DrukWide-Bold.woff2 ou .otf).
+   Sans fichier, le site utilise Archivo Expanded, très proche.
+   ============================================================ */
+@font-face {
+  font-family: "Druk Wide";
+  src: local("Druk Wide Bold"), local("DrukWide-Bold"),
+       url("fonts/DrukWide-Bold.woff2") format("woff2"),
+       url("fonts/DrukWide-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   Palette
+   ============================================================ */
+:root {
+  /* Palette « nuit d'hiver en montagne » : bleu nuit dominant,
+     neige pour le texte, lueurs chaudes pour les accents          */
+  --night:     #172640;   /* ciel de nuit, fond de page          */
+  --night-2:   #0e182a;   /* nuit profonde, marge du sommaire    */
+  --slate:     #24375a;   /* ardoise bleue, cadres photo         */
+  --snow:      #f3ece2;   /* neige chaude, texte et trait        */
+  --alpenglow: #ee7d55;   /* lueur orangée sur les sommets       */
+  --glacier:   #9ecbe6;   /* bleu glacier                        */
+  --lamp:      #e6b45c;   /* lumière de la lampe, dates          */
+
+  --paper:      var(--night);
+  --paper-2:    var(--slate);
+  --ink:        var(--snow);
+  --ink-soft:   rgba(243,236,226,.74);
+  --muted:      rgba(243,236,226,.5);
+  --accent:     var(--alpenglow);
+  --rule:       rgba(243,236,226,.16);
+  --snow-2:     var(--slate);
+  --granite:    rgba(243,236,226,.22);
+  --title-1:    var(--alpenglow);   /* titres de parties, en alternance */
+  --title-2:    var(--glacier);
+
+  /* Marge du sommaire : un bleu plus profond que la page */
+  --side-bg:    var(--night-2);
+  --side-text:  var(--snow);
+  --side-soft:  rgba(243,236,226,.65);
+  --side-rule:  rgba(243,236,226,.12);
+  --side-1:     var(--alpenglow);
+  --side-2:     var(--glacier);
+  --sidebar-w: 270px;
+  --gutter: 140px;         /* colonne où passe le trait */
+
+  --display: "Druk Wide", "Archivo", "Arial Black", sans-serif;
+  --sans:    "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif:   "Instrument Serif", Georgia, serif;
+  --hand:    "Caveat", cursive;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+/* ============================================================
+   Marge gauche fixe
+   ============================================================ */
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: var(--sidebar-w);
+  padding: 44px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  background: var(--side-bg);
+  color: var(--side-text);
+  overflow-y: auto;
+  z-index: 20;
+}
+
+.name {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-stretch: 125%;
+  text-transform: uppercase;
+  font-size: 1.12rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  letter-spacing: .01em;
+}
+.tagline {
+  margin: 12px 0 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  color: var(--side-soft);
+}
+
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc a {
+  position: relative;
+  display: grid;
+  padding: 11px 0;
+  text-decoration: none;
+  border-top: 1px solid var(--side-rule);
+  color: var(--side-1);           /* mêmes teintes que les titres de parties */
+  opacity: .62;
+  transition: opacity .2s;
+}
+.toc li:nth-child(even) a { color: var(--side-2); }
+.toc li:last-child a { border-bottom: 1px solid var(--side-rule); }
+.toc .toc-label { font-size: .95rem; font-weight: 600; }
+.toc a:hover,
+.toc a.active { opacity: 1; }
+.toc a.active::after {
+  content: "";
+  position: absolute;
+  left: -32px; top: 10px; bottom: 10px;
+  width: 3px;
+  background: currentColor;
+}
+
+.contact {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: .9rem;
+}
+.contact a {
+  width: fit-content;
+  text-decoration: none;
+  color: var(--side-soft);
+  transition: color .2s;
+}
+.contact a::after { content: " ↗"; opacity: .6; }
+.contact a:hover { color: var(--side-1); }
+
+.menu-toggle { display: none; }
+
+/* ============================================================
+   Contenu principal
+   ============================================================ */
+.content {
+  margin-left: var(--sidebar-w);
+  padding: 0 56px 140px;
+}
+
+.intro {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 130px 0 90px;
+  text-align: center;
+}
+.intro-kicker {
+  margin: 22px 0 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--title-1);
+}
+.intro-title {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-stretch: 125%;
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 3.8vw, 3.1rem);
+  line-height: 1.04;
+  text-wrap: balance;
+}
+.intro-title em {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-stretch: 100%;
+  text-transform: none;
+  font-size: .72em;
+  line-height: 1.15;
+  color: var(--ink-soft);
+}
+.intro-rule {
+  display: block;
+  width: 48px; height: 2px;
+  margin: 34px auto 28px;
+  background: var(--alpenglow);
+}
+.intro-text {
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+.scroll-hint {
+  margin: 56px 0 0;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ============================================================
+   Frise chronologique
+   ============================================================ */
+.timeline {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.ink {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 0;
+}
+
+.chapter {
+  position: relative;
+  z-index: 1;
+  padding-top: 60px;
+  scroll-margin-top: 20px;
+}
+
+.chapter-head {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 70px;
+  padding: 14px 32px;
+  text-align: center;
+  background: var(--paper);   /* masque le trait qui passe derrière */
+}
+/* ============================================================
+   Petits dessins (piolet, ski, tente…)
+   ============================================================ */
+.doodle { display: block; width: 64px; height: 64px; color: var(--ink); }
+.doodle svg {
+  width: 100%; height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.2;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+.doodle path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1.4s cubic-bezier(.6,.1,.3,1);
+}
+.doodle path:nth-child(2) { transition-delay: .25s; }
+.doodle path:nth-child(3) { transition-delay: .45s; }
+.doodle path:nth-child(n+4) { transition-delay: .6s; }
+.doodle:not(.drawn) svg { visibility: hidden; }  /* évite les points des extrémités carrées */
+.doodle.drawn path { stroke-dashoffset: 0; }
+
+/* Montagne au-dessus du titre d'accueil */
+.intro .doodle { width: 76px; height: 76px; margin: 0 auto 26px; }
+
+/* Dessin à côté de chaque titre de partie, en alternance */
+.chapter-head { position: relative; }
+.chapter-head .doodle {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 28px);
+  transform: translateY(-50%) rotate(-4deg);
+}
+.chapter:nth-of-type(even) .chapter-head .doodle {
+  right: auto;
+  left: calc(100% + 28px);
+  transform: translateY(-50%) rotate(4deg);
+}
+
+/* Tente au bout du chemin */
+.signature { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.signature .doodle { width: 58px; height: 58px; }
+.chapter-head h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-stretch: 125%;
+  text-transform: uppercase;
+  font-size: clamp(1.7rem, 3.2vw, 2.7rem);
+  line-height: 1;
+  letter-spacing: .01em;
+  color: var(--title-1);
+}
+.chapter:nth-of-type(even) .chapter-head h3 { color: var(--title-2); }
+.chapter-head { display: flex; flex-direction: column; align-items: center; }
+
+/* Une étape : texte | trait | photo  (alterné) */
+.entry {
+  display: grid;
+  grid-template-columns: 1fr var(--gutter) 1fr;
+  align-items: start;
+  margin-bottom: 96px;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+/* Titres, étapes et fin du fil apparaissent quand le trait les atteint (script.js) */
+.chapter-head,
+.signature { opacity: 0; transition: opacity .6s ease; }
+.entry.visible,
+.chapter-head.visible,
+.signature.visible { opacity: 1; transform: none; }
+
+.entry-text  { grid-column: 1; grid-row: 1; text-align: right; max-width: 420px; justify-self: end; }
+.entry-media { grid-column: 3; grid-row: 1; }
+
+.entry.flip .entry-text  { grid-column: 3; text-align: left; justify-self: start; }
+.entry.flip .entry-media { grid-column: 1; }
+
+.entry .date {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--lamp);
+}
+.entry h4 {
+  margin: 6px 0 10px;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.25;
+  letter-spacing: -.01em;
+}
+.entry p { margin: 0 0 .7em; color: var(--ink-soft); }
+
+/* Photos */
+.entry-media { display: flex; flex-wrap: wrap; gap: 16px; }
+.entry.flip .entry-media { justify-content: flex-end; }
+
+.photo {
+  margin: 0;
+  width: min(100%, 320px);
+}
+.photo img,
+.photo .placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 14px 34px -12px rgba(0,0,0,.55);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+.photo:hover img { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 20px 40px -12px rgba(0,0,0,.6); }
+.photo figcaption {
+  padding-top: 8px;
+  font-family: var(--hand);   /* touche manuscrite, pour rester personnel */
+  font-size: 1.15rem;
+  line-height: 1.2;
+  color: var(--ink-soft);
+}
+.entry.flip .photo figcaption { text-align: right; }
+
+/* Cadre affiché si l'image n'existe pas encore */
+.photo .placeholder {
+  display: grid; place-items: center;
+  padding: 12px;
+  background: var(--snow-2);
+  border: 1px dashed var(--granite);
+  box-shadow: none;
+  color: var(--muted);
+  font-size: .8rem;
+  text-align: center;
+}
+
+.signature {
+  position: relative; z-index: 1;
+  width: fit-content;
+  margin: 40px auto 0;
+  padding: 8px 24px;
+  background: var(--paper);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--ink-soft);
+}
+
+/* ============================================================
+   Mobile / tablette
+   ============================================================ */
+@media (max-width: 900px) {
+  :root { --gutter: 52px; }
+
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform .35s ease;
+    box-shadow: 4px 0 30px rgba(0,0,0,.15);
+  }
+  .sidebar.open { transform: none; }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    position: fixed;
+    top: 14px; right: 14px;
+    width: 44px; height: 44px;
+    padding: 0 12px;
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+    background: var(--side-bg);
+    cursor: pointer;
+    z-index: 30;
+  }
+  .menu-toggle span { height: 2px; background: var(--side-text); border-radius: 2px; }
+
+  .content { margin-left: 0; padding: 0 16px 80px; }
+  .intro { padding: 90px 0 60px; }
+
+  .entry,
+  .entry.flip { grid-template-columns: var(--gutter) 1fr; row-gap: 18px; margin-bottom: 72px; }
+  .entry .entry-text,
+  .entry.flip .entry-text  { grid-column: 2; grid-row: 1; text-align: left; justify-self: start; }
+  .entry .entry-media,
+  .entry.flip .entry-media { grid-column: 2; grid-row: 2; justify-content: flex-start; }
+  .entry.flip .photo figcaption { text-align: left; }
+
+  .chapter-head {
+    align-items: flex-start;
+    margin: 0 0 50px calc(var(--gutter) - 16px);
+    padding: 12px 16px;
+    text-align: left;
+  }
+  .chapter-head .doodle,
+  .chapter:nth-of-type(even) .chapter-head .doodle {
+    position: static;
+    width: 46px; height: 46px;
+    margin-bottom: 12px;
+    transform: none;
+  }
+  .signature { margin-left: calc(var(--gutter) - 16px); align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .entry, .chapter-head, .signature { opacity: 1; transform: none; transition: none; }
+}

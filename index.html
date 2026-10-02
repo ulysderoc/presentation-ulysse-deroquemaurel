@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ulysse de Roquemaurel — Candidature Quechua / Simond</title>
+  <meta name="description" content="Candidature d'Ulysse de Roquemaurel pour le stage ingénieur essai terrain Quechua / Simond.">
+  <!-- Le site reste accessible avec le lien, mais n'apparaît pas dans Google & co -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, noimageindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Archivo Expanded : remplaçant gratuit si Druk Wide n'est pas installée -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Caveat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== MARGE GAUCHE FIXE ===================== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="profile">
+      <h1 class="name">De Roquemaurel<br>Ulysse</h1>
+      <p class="tagline">Étudiant en Conception mécaniqueAA</p>
+    </div>
+
+    <nav class="toc" aria-label="Sommaire">
+      <ol id="toc-list"><!-- rempli automatiquement à partir des chapitres --></ol>
+    </nav>
+
+    <div class="contact">
+      <a href="mailto:ulysse.de-roquemaurel@student.junia.com">E-mail</a>
+      <a href="https://www.linkedin.com/in/ulysseder" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="CV 2027 Ulysse de Roquemaurel.pdf" target="_blank">CV</a>
+    </div>
+  </aside>
+
+  <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le sommaire" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- ===================== CONTENU ===================== -->
+  <main class="content">
+
+    <header class="intro" data-doodle="montagne">
+      <h2 class="intro-title">Candidature stage<br><em>Ingénieur essai terrain Quechua / Simond</em></h2>
+      <span class="intro-rule" aria-hidden="true"></span>
+      <p class="intro-text">
+        Actuellement en césure, à la recherche de mon futur métier. Grand mordu de ski de randonnée,
+        d'escalade et de bivouac, j'aimerais découvrir l'industrie des sports de montagne avant
+        d'entamer ma dernière année d'école d'ingénieur en alternance.
+      </p>
+      <p class="scroll-hint">Suivre le fil <span aria-hidden="true">↓</span></p>
+      <p class="intro-kicker">Mon parcours</p>
+    </header>
+
+    <div class="timeline" id="timeline">
+      <!-- Le trait de plume est dessiné ici automatiquement -->
+      <svg class="ink" id="ink" aria-hidden="true"></svg>
+
+      <!--
+        COMMENT AJOUTER DU CONTENU
+        ---------------------------
+        • Un chapitre  = <section class="chapter" id="..." data-title="...">
+          (il apparaît tout seul dans le sommaire)
+          data-doodle="..." ajoute un petit dessin à côté du titre :
+          montagne, chaussure, ski, piolet, crampon, chamois, tente
+        • Une étape    = <article class="entry"> … </article>
+          Les étapes alternent automatiquement gauche / droite.
+        • Une photo    = <figure class="photo"><img src="images/xxx.jpg" alt=""><figcaption>…</figcaption></figure>
+          Dépose simplement l'image dans le dossier "images". Si elle manque, un cadre vide s'affiche.
+      -->
+
+      <!-- ───────── LES DÉBUTS ───────── -->
+      <section class="chapter" id="debuts" data-doodle="chaussure" data-title="Les débuts">
+        <div class="chapter-head">
+          <h3>Les débuts</h3>
+        </div>
+
+        <article class="entry">
+          <div class="entry-text">
+            <span class="date">2003</span>
+            <h4>Tombé dans la montagne</h4>
+            <p>Ça, c'est moi petit. Je suis né dans une famille de montagnards et, suspense… je suis tombé dedans aussi.</p>
+          </div>
+          <div class="entry-media">
+            <figure class="photo">
+              <img src="images/enfance.jpg" alt="Moi enfant en montagne">
+            </figure>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-text">
+            <span class="date">2019</span>
+            <h4>Un an en Finlande</h4>
+            <p>À la fin du collège, j'avais envie découvir de nouveaux horizons. 
+              J'ai donc monté mon projet d'échange pour partir au lycée en Finlande. 
+              Après 1 an d'ouverture à l'international et d'adaptation, je suis revenu bilingue et résistant au froid ! </p>
+          </div>
+          <div class="entry-media">
+            <figure class="photo">
+              <img src="images/finlande.jpg" alt="Mon année d'échange en Finlande">
+            </figure>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-text">
+            <span class="date">2022</span>
+            <h4>Direction JUNIA HEI</h4>
+            <p>À la fin du lycée, je me suis rendu compte que j'avais toujours bricolé&nbsp;:
+               mon vélo, de l'impression 3D, mes habits à rafistoler. Direction l'école d'ingénieur, à JUNIA HEI à Lille&nbsp;!</p>
+          </div>
+          <div class="entry-media">
+            <figure class="photo">
+              <img src="images/bricolage.jpg" alt="Bricolage">
+            </figure>
+          </div>
+        </article>
+      </section>
+
+      <!-- ───────── ÉTUDES ───────── -->
+      <section class="chapter" id="etudes" data-doodle="piolet" data-title="Études">
+        <div class="chapter-head">
+          <h3>Études</h3>
+        </div>
+
+        <article class="entry">
+          <div class="entry-text">
+            <span class="date">2025</span>
+            <h4>Conception mécanique</h4>
+            <p>J'ai choisi la conception mécanique parce que je voulais travailler sur des choses tangibles.</p>
+          </div>
+          <div class="entry-media">
+            <figure class="photo">
+              <img src="images/conception.jpg" alt="Conception mécanique">
+            </figure>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-text">
+            <h4>Projet vélo cargo</h4>
+            <p>Avec mon groupe, on voulait inventer quelque chose de nouveau. 
+              Résultat&nbsp;: un kit de conversion adaptable et pliable, qui transforme un vélo classique en vélo cargo. 
+              Le défi était qu'il reste performant, ergonomique et accessible.</p>
+          </div>
+          <div class="entry-media">
+            <figure class="photo">
+              <img src="images/velo-cargo.jpg" alt="Le kit vélo cargo">
+            </figure>
+          </div>
+        </article>
+      </section>
+
+      <!-- ───────── ANNÉE DE CÉSURE ───────── -->
+      <section class="chapter" id="cesure" data-doodle="crampon" data-title="Année de césure">
+        <div class="chapter-head">
+          <h3>Année de césure</h3>
+        </div>
+
+        <article class="entry">
+          <div class="entry-text">
+            <span class="date">2026</span>
+            <h4>Trouver ma voie</h4>
+            <p>J'en avais marre de la théorie. Je voulais encore plus de concret et trouver ma voie&nbsp;: les cours, c'est bien gentil, mais on ne nous apprend pas les métiers qui vont avec. Mon objectif pour cette année, c'est de découvrir deux industries et, peut-être, mon futur métier.
+              D'abord l'aéronautique, parce que ça avait l'air chouette&nbsp;: j'ai atterri chez Safran Aero Boosters, à Liège, en Belgique. Et ensuite, je l'espère, relier ma passion à mon travail&nbsp;: la montagne&nbsp;!</p>
+          </div>
+          <div class="entry-media">
+            <figure class="photo">
+              <img src="images/cesure.jpg" alt="Année de césure">
+            </figure>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-text">
+            <span class="date">Safran Aero Boosters · Mission 1</span>
+            <h4>Identifier l'origine d'un déséquilibre</h4>
+            <p>Une pièce critique du rotor du moteur d'avion LEAP-1A présentait une non-conformité d'équilibre. Ma mission&nbsp;: identifier les principaux contributeurs à cette non-conformité, pour réduire les problèmes à l'avenir.</p>
+            <p>J'ai d'abord listé toutes les causes possibles avec un diagramme d'Ishikawa (6M). J'ai ensuite comparé des échantillons, étudié la dispersion des mesures et des calculs de masse excentrés. Ces analyses m'ont permis de mieux cerner le problème, d'écarter plusieurs hypothèses et d'identifier un contributeur probable.</p>
+            <p>J'ai aussi développé un outil sous Excel qui calcule le déséquilibre global de la pièce à partir de ses variations géométriques. Le résultat s'affiche sous forme de graphique&nbsp;: on peut tester rapidement plusieurs scénarios et repérer les caractéristiques qui posent problème.</p>
+          </div>
+          <div class="entry-media">
+            <figure class="photo">
+              <img src="images/safran-mission1.jpg" alt="Safran Aero Boosters, mission équilibrage">
+            </figure>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-text">
+            <span class="date">Safran Aero Boosters · Mission 2</span>
+            <h4>Renfort sur un programme R&amp;T composite</h4>
+            <p>J'ai rejoint l'équipe en renfort sur un sujet de R&amp;T (recherche et technologie) portant sur des pièces en composite carbone-époxy. J'ai fabriqué et contrôlé des pièces, puis défini comment les contrôler de façon systématique.</p>
+            <p>J'ai conçu un outil de contrôle dimensionnel sous Excel (VBA). Il définit automatiquement le protocole adapté à la dimension de la pièce, enregistre les mesures, les compare aux tolérances et produit un rapport PDF.</p>
+          </div>
+          <div class="entry-media">
+            <figure class="photo">
+              <img src="images/safran-mission2.jpg" alt="Pièces en composite carbone-époxy">
+            </figure>
+          </div>
+        </article>
+      </section>
+
+      <!-- ───────── À CÔTÉ DES COURS ───────── -->
+      <section class="chapter" id="parallèle" data-doodle="ski" data-title="En parallèle">
+        <div class="chapter-head">
+          <h3>En parallèle</h3>
+        </div>
+
+        <article class="entry">
+          <div class="entry-text">
+            <h4>Encadrer en pleine nature</h4>
+            <p>Avec une asso de mon école, j'ai eu l'occasion d'encadrer des débutants en randonnée-bivouac. Il faut donner les bons conseils, garder le groupe motivé quand la fatigue arrive et remonter le moral de celui qui décroche.</p>
+          </div>
+          <div class="entry-media">
+            <figure class="photo">
+              <img src="images/encadrement.jpg" alt="Sortie en pleine nature avec l'asso">
+            </figure>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-text">
+            <h4>Collectif BPM</h4>
+            <p>En parallèle, avec des copains, on a repris un collectif de musique électronique, BPM. On a organisé des événements avec des artistes et des professionnels, et ça m'a appris à gérer une équipe, avec des délais et un budget. J'y ai gagné le sens des responsabilités, tout en partageant ma passion&nbsp;!</p>
+          </div>
+          <div class="entry-media">
+            <figure class="photo">
+              <img src="images/bpm.jpg" alt="Événement du collectif BPM">
+            </figure>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-text">
+            <h4>Moniteur de voile aux États-Unis</h4>
+            <p>Un été, j'ai été moniteur de voile dans l'État de New York, grâce à un vieux copain américain rencontré en Finlande. J'ai appris à expliquer des notions techniques en anglais et à adapter ma pédagogie à chaque élève, de l'enfant à l'adulte. Le meilleur moment, c'est quand un élève sent enfin son bateau décoller sur l'eau&nbsp;!</p>
+          </div>
+          <div class="entry-media">
+            <figure class="photo">
+              <img src="images/voile.jpg" alt="Cours de voile dans l'État de New York">
+            </figure>
+          </div>
+        </article>
+      </section>
+
+      <p class="signature" data-doodle="tente">… à suivre.</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
