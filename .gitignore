@@ -1,0 +1,6 @@
+# Photos originales (lourdes, HEIC/RAW) : seules les versions web de /images sont publiées
+images-originaux/
+preparer-images.ps1
+
+# Réglages locaux de l'éditeur / de Claude
+.claude/

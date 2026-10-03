@@ -19,14 +19,13 @@
   <!-- ===================== MARGE GAUCHE FIXE ===================== -->
   <aside class="sidebar" id="sidebar">
     <div class="profile">
-      <h1 class="name">De Roquemaurel<br>Ulysse</h1>
-      <p class="tagline">Étudiant en Conception mécaniqueAA</p>
+      <h1 class="name">Ulysse<br>De Roquemaurel</h1>
+      <p class="tagline">Étudiant en Conception mécanique</p>
     </div>
 
     <nav class="toc" aria-label="Sommaire">
       <ol id="toc-list"><!-- rempli automatiquement à partir des chapitres --></ol>
     </nav>
-
     <div class="contact">
       <a href="mailto:ulysse.de-roquemaurel@student.junia.com">E-mail</a>
       <a href="https://www.linkedin.com/in/ulysseder" target="_blank" rel="noopener">LinkedIn</a>
@@ -42,12 +41,11 @@
   <main class="content">
 
     <header class="intro" data-doodle="montagne">
-      <h2 class="intro-title">Candidature stage<br><em>Ingénieur essai terrain Quechua / Simond</em></h2>
+      <h2 class="intro-title">Candidature de stage<br><em>Ingénieur essai terrain Quechua / Simond</em></h2>
       <span class="intro-rule" aria-hidden="true"></span>
       <p class="intro-text">
-        Actuellement en césure, à la recherche de mon futur métier. Grand mordu de ski de randonnée,
-        d'escalade et de bivouac, j'aimerais découvrir l'industrie des sports de montagne avant
-        d'entamer ma dernière année d'école d'ingénieur en alternance.
+        Actuellement en césure, je termine mon stage d'ingénieur méthodes chez Safran Aero Boosters. 
+        Grand mordu de ski de randonnée, d'escalade et de bivouac, j'aimerais maintenant découvrir l'industrie des sports de montagne, avant d'entamer ma dernière année d'école d'ingénieur en alternance.
       </p>
       <p class="scroll-hint">Suivre le fil <span aria-hidden="true">↓</span></p>
       <p class="intro-kicker">Mon parcours</p>
@@ -66,8 +64,12 @@
           montagne, chaussure, ski, piolet, crampon, chamois, tente
         • Une étape    = <article class="entry"> … </article>
           Les étapes alternent automatiquement gauche / droite.
-        • Une photo    = <figure class="photo"><img src="images/xxx.jpg" alt=""><figcaption>…</figcaption></figure>
-          Dépose simplement l'image dans le dossier "images". Si elle manque, un cadre vide s'affiche.
+        • Une photo    = <figure class="photo"><img src="images/xxx.jpg" alt=""></figure>
+          Plusieurs <img> dans la même figure = diaporama (défilement auto + flèches).
+          data-caption="…" sur une <img> = légende sous la photo.
+          data-note="Mon papa" data-note-from="x,y" data-note-to="x,y" = étiquette + flèche
+          (coordonnées en % de la photo : from = où se pose l'étiquette, to = la personne visée).
+          Si une image manque, un cadre vide s'affiche.
       -->
 
       <!-- ───────── LES DÉBUTS ───────── -->
@@ -80,26 +82,31 @@
           <div class="entry-text">
             <span class="date">2003</span>
             <h4>Tombé dans la montagne</h4>
-            <p>Ça, c'est moi petit. Je suis né dans une famille de montagnards et, suspense… je suis tombé dedans aussi.</p>
+            <p>Né dans une famille férue de montagne, sur des skis depuis tout petit. Vingt ans plus tard, j'aimerais concevoir le matériel avec lequel j'ai grandi.</p>
           </div>
           <div class="entry-media">
             <figure class="photo">
-              <img src="images/enfance.jpg" alt="Moi enfant en montagne">
+              <img src="images/enfance.jpg" alt="Moi enfant au ski avec mon papa" data-note="Mon papa" data-note-from="30,13" data-note-to="44,29">
+              <img src="images/enfance2.jpg" alt="En randonnée avec ma maman" data-note="Ma maman" data-note-from="80,40" data-note-to="67,54">
+              <img src="images/enfance4.jpg" alt="En ski de randonnée avec mon frère" data-note="Mon frère" data-note-from="28,36" data-note-to="41,47">
+              <img src="images/enfance5.jpg" alt="Moi enfant en montagne">
+              <img src="images/enfance-6.jpg" alt="Moi enfant en montagne">
             </figure>
           </div>
         </article>
 
-        <article class="entry">
+        <article class="entry" data-doodle="renne">
           <div class="entry-text">
             <span class="date">2019</span>
             <h4>Un an en Finlande</h4>
             <p>À la fin du collège, j'avais envie découvir de nouveaux horizons. 
-              J'ai donc monté mon projet d'échange pour partir au lycée en Finlande. 
+              J'ai donc organisé un projet d'échange pour partir au lycée en Finlande. 
               Après 1 an d'ouverture à l'international et d'adaptation, je suis revenu bilingue et résistant au froid ! </p>
           </div>
           <div class="entry-media">
             <figure class="photo">
-              <img src="images/finlande.jpg" alt="Mon année d'échange en Finlande">
+              <img src="images/finlande-0.jpg" alt="Pêche sur un lac gelé en Finlande" data-caption="Un hiver en Finlande" data-note="Mon grand-père d'accueil" data-note-from="72,20" data-note-to="66,36">
+              <img src="images/finlande1.jpg" alt="Réunion du Youth Exchange Programme du Rotary" data-caption="Réunion du Youth Exchange Programme du Rotary en Finlande">
             </figure>
           </div>
         </article>
@@ -108,12 +115,12 @@
           <div class="entry-text">
             <span class="date">2022</span>
             <h4>Direction JUNIA HEI</h4>
-            <p>À la fin du lycée, je me suis rendu compte que j'avais toujours bricolé&nbsp;:
-               mon vélo, de l'impression 3D, mes habits à rafistoler. Direction l'école d'ingénieur, à JUNIA HEI à Lille&nbsp;!</p>
+            <p>J'ai toujours aimé bricoler et rafistoler<br>donc à la fin du lycée, j'ai choisi<br>l'école d'ingénieur JUNIA HEI à Lille&nbsp;!</p>
           </div>
           <div class="entry-media">
             <figure class="photo">
-              <img src="images/bricolage.jpg" alt="Bricolage">
+              <img src="images/bricolage.jpg" alt="Atelier couture" data-caption="Atelier couture">
+              <img src="images/bricolage1.jpg" alt="Atelier bricolage vélo" data-caption="Atelier bricolage vélo">
             </figure>
           </div>
         </article>
@@ -125,29 +132,29 @@
           <h3>Études</h3>
         </div>
 
-        <article class="entry">
+        <article class="entry" data-doodle="engrenage">
           <div class="entry-text">
             <span class="date">2025</span>
             <h4>Conception mécanique</h4>
-            <p>J'ai choisi la conception mécanique parce que je voulais travailler sur des choses tangibles.</p>
+            <p>En 4<sup>e</sup> année, j'ai choisi la conception mécanique, pour continuer à bricoler et innover, mais cette fois-ci, en tant qu'ingnieur.</p>
           </div>
           <div class="entry-media">
             <figure class="photo">
-              <img src="images/conception.jpg" alt="Conception mécanique">
+              <img src="images/conception.png" alt="Exercice de construction mécanique" data-caption="Extrait d'un exercice de construction mécanique">
             </figure>
           </div>
         </article>
 
-        <article class="entry">
+        <article class="entry" data-doodle="velo">
           <div class="entry-text">
             <h4>Projet vélo cargo</h4>
-            <p>Avec mon groupe, on voulait inventer quelque chose de nouveau. 
-              Résultat&nbsp;: un kit de conversion adaptable et pliable, qui transforme un vélo classique en vélo cargo. 
-              Le défi était qu'il reste performant, ergonomique et accessible.</p>
+            <p>Lors d'un projet de groupe, on a voulu innover. 
+              On a donc pensé à un kit de conversion, adaptable et pliable, qui transforme un vélo classique en vélo cargo. 
+              Le défi était qu'il soit performant, ergonomique tou en restant accessible.</p>
           </div>
           <div class="entry-media">
             <figure class="photo">
-              <img src="images/velo-cargo.jpg" alt="Le kit vélo cargo">
+              <img src="images/velo-cargo.png" alt="Modèle 3D du kit vélo cargo" data-caption="Modèle 3D du projet">
             </figure>
           </div>
         </article>
@@ -163,8 +170,10 @@
           <div class="entry-text">
             <span class="date">2026</span>
             <h4>Trouver ma voie</h4>
-            <p>J'en avais marre de la théorie. Je voulais encore plus de concret et trouver ma voie&nbsp;: les cours, c'est bien gentil, mais on ne nous apprend pas les métiers qui vont avec. Mon objectif pour cette année, c'est de découvrir deux industries et, peut-être, mon futur métier.
-              D'abord l'aéronautique, parce que ça avait l'air chouette&nbsp;: j'ai atterri chez Safran Aero Boosters, à Liège, en Belgique. Et ensuite, je l'espère, relier ma passion à mon travail&nbsp;: la montagne&nbsp;!</p>
+            <p>La théorie ne me suffisait plus. J'aspirais à davantage de concret et trouver ma voie. 
+              C'est pourquoi j'ai décidé de faire une césure dans l'objectif de découvrir deux industries différentes et, peut-être, un futur métier.
+              Dans un premier temps, j'ai atterri dans l'aéronautique chez Safran Aero Boosters, à Liège, en Belgique. 
+              Et ensuite, j'espère allier plus mes passions à mon travail&nbsp;: la montagne&nbsp;!</p>
           </div>
           <div class="entry-media">
             <figure class="photo">
@@ -177,27 +186,32 @@
           <div class="entry-text">
             <span class="date">Safran Aero Boosters · Mission 1</span>
             <h4>Identifier l'origine d'un déséquilibre</h4>
-            <p>Une pièce critique du rotor du moteur d'avion LEAP-1A présentait une non-conformité d'équilibre. Ma mission&nbsp;: identifier les principaux contributeurs à cette non-conformité, pour réduire les problèmes à l'avenir.</p>
+            <p>Une pièce critique du rotor du moteur d'avion LEAP-1A présentait une non-conformité d'équilibre. Ma mission&nbsp;: identifier les principaux contributeurs à cette anomalie, pour réduire les problèmes à l'avenir.</p>
             <p>J'ai d'abord listé toutes les causes possibles avec un diagramme d'Ishikawa (6M). J'ai ensuite comparé des échantillons, étudié la dispersion des mesures et des calculs de masse excentrés. Ces analyses m'ont permis de mieux cerner le problème, d'écarter plusieurs hypothèses et d'identifier un contributeur probable.</p>
             <p>J'ai aussi développé un outil sous Excel qui calcule le déséquilibre global de la pièce à partir de ses variations géométriques. Le résultat s'affiche sous forme de graphique&nbsp;: on peut tester rapidement plusieurs scénarios et repérer les caractéristiques qui posent problème.</p>
           </div>
           <div class="entry-media">
             <figure class="photo">
-              <img src="images/safran-mission1.jpg" alt="Safran Aero Boosters, mission équilibrage">
+              <img src="images/safran.jpg" alt="Exposition d'un moteur d'avion CFM" data-caption="Exposition d'un moteur d'avion CFM">
             </figure>
           </div>
         </article>
+
+        <!-- Vol de la mission 1 vers la mission 2 -->
+        <div class="flight" data-doodle="avion" aria-hidden="true">
+          <svg class="trail" viewBox="0 0 600 90" preserveAspectRatio="none"><path d="M20 12 C 180 0, 300 90, 470 66"/></svg>
+        </div>
 
         <article class="entry">
           <div class="entry-text">
             <span class="date">Safran Aero Boosters · Mission 2</span>
             <h4>Renfort sur un programme R&amp;T composite</h4>
-            <p>J'ai rejoint l'équipe en renfort sur un sujet de R&amp;T (recherche et technologie) portant sur des pièces en composite carbone-époxy. J'ai fabriqué et contrôlé des pièces, puis défini comment les contrôler de façon systématique.</p>
+            <p>J'ai rejoint l'équipe en renfort sur un sujet de recherche et technologie (R&amp;T) portant sur des pièces en composite carbone-époxy. J'ai fabriqué et contrôlé des pièces, puis défini comment les contrôler de façon systématique.</p>
             <p>J'ai conçu un outil de contrôle dimensionnel sous Excel (VBA). Il définit automatiquement le protocole adapté à la dimension de la pièce, enregistre les mesures, les compare aux tolérances et produit un rapport PDF.</p>
           </div>
           <div class="entry-media">
             <figure class="photo">
-              <img src="images/safran-mission2.jpg" alt="Pièces en composite carbone-époxy">
+              <img src="images/safran-mission2.jpg" alt="Pièces en composite carbone-époxy" data-caption="Pièces en composite carbone-époxy">
             </figure>
           </div>
         </article>
@@ -212,41 +226,65 @@
         <article class="entry">
           <div class="entry-text">
             <h4>Encadrer en pleine nature</h4>
-            <p>Avec une asso de mon école, j'ai eu l'occasion d'encadrer des débutants en randonnée-bivouac. Il faut donner les bons conseils, garder le groupe motivé quand la fatigue arrive et remonter le moral de celui qui décroche.</p>
+            <p>Avec une association de mon école, j'ai eu l'occasion d'encadrer des débutants en randonnée-bivouac. 
+              Il faut savoir donner les bons conseils et garder le groupe motivé.</p>
           </div>
           <div class="entry-media">
             <figure class="photo">
-              <img src="images/encadrement.jpg" alt="Sortie en pleine nature avec l'asso">
+              <img src="images/encadrement.jpg" alt="Randonnée en Auvergne avec Junia Rando" data-caption="Randonnée en Auvergne avec Junia Rando">
             </figure>
           </div>
         </article>
 
-        <article class="entry">
+        <article class="entry" data-doodle="vinyle">
           <div class="entry-text">
             <h4>Collectif BPM</h4>
-            <p>En parallèle, avec des copains, on a repris un collectif de musique électronique, BPM. On a organisé des événements avec des artistes et des professionnels, et ça m'a appris à gérer une équipe, avec des délais et un budget. J'y ai gagné le sens des responsabilités, tout en partageant ma passion&nbsp;!</p>
+            <p>En parallèle, avec un copain, on a repris un collectif de musique électronique, BPM. 
+              On a organisé des événements avec des artistes et des professionnels, cela m'a appris à gérer une équipe, des délais et un budget. 
+              J'y ai gagné un certain sens des responsabilités, tout en partageant ma passion&nbsp;!</p>
           </div>
           <div class="entry-media">
             <figure class="photo">
-              <img src="images/bpm.jpg" alt="Événement du collectif BPM">
+              <img src="images/bpm1.jpg" alt="Installation d'une soirée BPM" data-caption="Installation d'une soirée au Garage Les Lillois">
+              <img src="images/bpm.jpg" alt="Soirée BPM au Nox Club" data-caption="Soirée au Nox Club">
             </figure>
           </div>
         </article>
 
-        <article class="entry">
+        <article class="entry" data-doodle="bateau">
           <div class="entry-text">
             <h4>Moniteur de voile aux États-Unis</h4>
-            <p>Un été, j'ai été moniteur de voile dans l'État de New York, grâce à un vieux copain américain rencontré en Finlande. J'ai appris à expliquer des notions techniques en anglais et à adapter ma pédagogie à chaque élève, de l'enfant à l'adulte. Le meilleur moment, c'est quand un élève sent enfin son bateau décoller sur l'eau&nbsp;!</p>
+            <p>L'été dernier, j'ai été moniteur de voile dans l'État de New York, grâce à un ami américain rencontré en Finlande. 
+              J'ai appris à expliquer des notions techniques en anglais et à adapter ma pédagogie à chaque élève, de l'enfant à l'adulte. 
+              C'était super gratifiant de voir les élèves sourirent lorqu'ils sentaient enfin leur bateau décoller sur l'eau&nbsp;!</p>
           </div>
           <div class="entry-media">
             <figure class="photo">
-              <img src="images/voile.jpg" alt="Cours de voile dans l'État de New York">
+              <img src="images/voile.jpg" alt="En voilier avec Patrick, dans l'État de New York" data-note="Patrick, mon ami américain" data-note-from="40,13" data-note-to="60,29">
             </figure>
           </div>
         </article>
       </section>
 
-      <p class="signature" data-doodle="tente">… à suivre.</p>
+      <!-- ───────── POUR FINIR ───────── -->
+      <section class="chapter" id="pour-finir" data-doodle="chamois" data-title="Pour finir">
+        <div class="chapter-head">
+          <h3>Pour finir</h3>
+        </div>
+
+        <article class="entry conclusion">
+          <div class="entry-text">
+            <p>Chez Safran, j'ai appris à mener une analyse rigoureuse et à concevoir des outils de fiabilisation de contrôles. 
+              J'aimerais maintenant déveloper mes compétences et les mettreau service de matériel qui me parle plus.</p>
+            <p>Dans un monde où l'activité humaine rend la nature de plus en plus instable et imprévisible, en particulier en montagne, je pense qu'il faut limiter notre impact. En tant que futur ingénieur, j'aimerais y contribuer en développant des produits plus durables, réparables et recyclables. 
+              C'est pourquoi les valeurs de Decathlon me parlent : rendre la montagne accessible au plus grand nombre, tout en la préservant.</p>
+            <p class="dispo">Je suis disponible de février à août. Je serais ravis d'échanger avec vous à propos de ce stage.</p>
+            <br>Pour la suite, je débuterai ma dernière année en alternance à la rentrée 2027. 
+            Si j'ai la chance de rejoindre vos équipes pour ce stage et que l'expérience s'avère concluante des deux côtés, ce serait une suite que j'envisagerais avec plaisir.
+      </section>
+
+      <!-- Fin du fil : la tente du bivouac -->
+      <p class="signature" data-doodle="tente"></p>
     </div>
   </main>
 
